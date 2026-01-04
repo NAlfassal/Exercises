@@ -10,10 +10,12 @@ cd Exercises
 uv sync #to create the environment with the requirements dependencies
 ```
 
-this repositry  conains solved Exercises in Machine learning field ,
+this repositry  contains solved Exercises in Machine learning field ,
 
 Module 1 : Tabular data exploration
 
 Module 2: Comparing train and test errors
 
 Module 3: Set and get hyperparameters in scikit-learn
+
+you can upload the notebooks , explore them , and return them , best of luck ..
