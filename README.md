@@ -48,10 +48,7 @@ cd Exercises
 
 ### 2. Install Dependencies
 ```bash
-# Using pip
-pip install -r requirements.txt
-
-# Or using uv (recommended)
+using uv 
 uv sync
 ```
 
