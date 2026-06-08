@@ -48,7 +48,7 @@ cd Exercises
 
 ### 2. Install Dependencies
 ```bash
-#using uv 
+# using uv 
 uv sync
 ```
 
@@ -58,7 +58,7 @@ jupyter notebook
 ```
 
 ### 4. Explore the Exercises
-Navigate to the `ML_Pipelines` folder and start with `01_Tabular_Data_Exploration`
+Navigate to the `ex` folder and start with `01_tabular_data_exploration_ex_01.ipynb`
 
 ---
 
@@ -67,34 +67,24 @@ Navigate to the `ML_Pipelines` folder and start with `01_Tabular_Data_Exploratio
 ```
 Exercises/
 │
-├── ML_Pipelines/                           # Main project folder
-│   │
-│   ├── 01_Tabular_Data_Exploration/
-│   │   ├── 01_tabular_data_exploration_ex_01.ipynb
-│   │   └── README.md
-│   │
-│   ├── 02_Numerical_Pipeline/
-│   │   ├── 02_numerical_pipeline_ex_00.ipynb
-│   │   ├── 02_numerical_pipeline_ex_01.ipynb
-│   │   └── README.md
-│   │
-│   ├── 03_Categorical_Pipeline/
-│   │   ├── 03_categorical_pipeline_ex_01.ipynb
-│   │   ├── 03_categorical_pipeline_ex_02.ipynb
-│   │   └── README.md
-│   │
-│   ├── 04_Cross_Validation/
-│   │   ├── cross_validation_ex_01.ipynb
-│   │   └── README.md
-│   │
-│   └── 05_Parameter_Tuning/
-│       ├── parameter_tuning_ex_02.ipynb
-│       ├── parameter_tuning_ex_03.ipynb
-│       └── README.md
+├── ex/                                     # Exercises folder
+│   ├── 01_tabular_data_exploration_ex_01.ipynb
+│   ├── 02_numerical_pipeline_ex_00.ipynb
+│   ├── 02_numerical_pipeline_ex_01.ipynb
+│   ├── 03_categorical_pipeline_ex_01.ipynb
+│   ├── 03_categorical_pipeline_ex_02.ipynb
+│   ├── cross_validation_ex_01.ipynb
+│   ├── parameter_tuning_ex_02.ipynb
+│   └── parameter_tuning_ex_03.ipynb
 │
-├── requirements.txt                        # Project dependencies
-├── .gitignore                             # Git configuration
-└── README.md                              # This file
+├── data/                                   # Dataset folder
+│
+├── pyproject.toml                          # Project configuration
+├── uv.lock                                 # Dependency lock file
+├── .python-version                         # Python version specification
+├── main.py                                 # Main script
+├── .gitignore                              # Git configuration
+└── README.md                               # This file
 ```
 
 ---
@@ -104,7 +94,7 @@ Exercises/
 ### 📊 Module 1: Tabular Data Exploration
 Understand data structure, perform exploratory data analysis (EDA), and identify patterns
 
-**File:** `01_tabular_data_exploration_ex_01.ipynb`
+**File:** `ex/01_tabular_data_exploration_ex_01.ipynb`
 - Data loading and inspection
 - Statistical analysis and profiling
 - Missing value detection
@@ -115,20 +105,20 @@ Understand data structure, perform exploratory data analysis (EDA), and identify
 Process numerical features with scaling, normalization, and advanced transformations
 
 **Files:**
-- `02_numerical_pipeline_ex_00.ipynb` - Foundations
-- `02_numerical_pipeline_ex_01.ipynb` - Advanced techniques
+- `ex/02_numerical_pipeline_ex_00.ipynb` - Foundations
+- `ex/02_numerical_pipeline_ex_01.ipynb` - Advanced techniques
 
 ### 🏷️ Module 3: Categorical Pipeline
 Handle categorical features with encoding techniques and feature engineering
 
 **Files:**
-- `03_categorical_pipeline_ex_01.ipynb` - Basic techniques
-- `03_categorical_pipeline_ex_02.ipynb` - Advanced handling
+- `ex/03_categorical_pipeline_ex_01.ipynb` - Basic techniques
+- `ex/03_categorical_pipeline_ex_02.ipynb` - Advanced handling
 
 ### ✔️ Module 4: Cross-Validation
 Implement proper model validation strategies to ensure generalization
 
-**File:** `cross_validation_ex_01.ipynb`
+**File:** `ex/cross_validation_ex_01.ipynb`
 - K-Fold and Stratified K-Fold
 - Time series validation
 - Performance metrics
@@ -138,8 +128,8 @@ Implement proper model validation strategies to ensure generalization
 Optimize hyperparameters using Grid Search, Random Search, and Bayesian Optimization
 
 **Files:**
-- `parameter_tuning_ex_02.ipynb` - Intermediate tuning
-- `parameter_tuning_ex_03.ipynb` - Advanced optimization
+- `ex/parameter_tuning_ex_02.ipynb` - Intermediate tuning
+- `ex/parameter_tuning_ex_03.ipynb` - Advanced optimization
 
 ---
 
@@ -226,7 +216,7 @@ STEP 5: Parameter Tuning
 | seaborn | ≥0.11.0 | Statistical plots |
 | jupyter | ≥1.0.0 | Notebook environment |
 
-See `requirements.txt` for complete list of dependencies.
+See `pyproject.toml` for complete list of dependencies.
 
 ---
 
@@ -234,7 +224,7 @@ See `requirements.txt` for complete list of dependencies.
 
 ### Prerequisites
 - Python 3.8 or higher
-- pip or uv package manager
+- uv package manager (or pip as alternative)
 - Git
 
 ### Step-by-Step Installation
@@ -245,27 +235,24 @@ git clone https://github.com/NAlfassal/Exercises.git
 cd Exercises
 ```
 
-2. **Create a virtual environment (optional but recommended)**
+2. **Install dependencies with uv**
 ```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
-
-3. **Install dependencies**
-```bash
-# Using pip
-pip install -r requirements.txt
-
-# Or using uv (faster)
+# Using uv (recommended)
 uv sync
 ```
 
-4. **Verify installation**
+Or with pip:
+```bash
+# Using pip as alternative
+pip install -r requirements.txt
+```
+
+3. **Verify installation**
 ```bash
 python -c "import pandas, numpy, sklearn; print('✅ All libraries installed successfully!')"
 ```
 
-5. **Launch Jupyter**
+4. **Launch Jupyter**
 ```bash
 jupyter notebook
 ```
@@ -282,8 +269,8 @@ jupyter notebook
    ```
 
 2. **Navigate to the exercise:**
-   - Open `ML_Pipelines` folder
-   - Choose your desired module
+   - Open `ex` folder
+   - Choose your desired exercise notebook
 
 3. **Work through the notebook:**
    - Read the instructions carefully
@@ -388,15 +375,30 @@ Found an issue or have suggestions? Feel free to:
 
 ---
 
-## Support
+## 📞 Support
 
 For questions about:
 - **Exercises:** Check the notebook documentation
-- **Concepts:** Review files in each module
+- **Concepts:** Review the notebook sections
 - **Technical Issues:** Refer to scikit-learn and pandas documentation
 
 ---
 
+## 📄 License
+
+This repository is open-source and available for educational purposes.
+
+---
+
+## 👤 Author
+
+**NAlfassal** - Data Science & Machine Learning Enthusiast
+
+**GitHub:** [@NAlfassal](https://github.com/NAlfassal)
+
+**Repository:** [Exercises](https://github.com/NAlfassal/Exercises)
+
+---
 
 ## 🎯 Next Steps
 
