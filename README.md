@@ -2,9 +2,9 @@
 
 > A comprehensive collection of hands-on exercises and projects focused on mastering machine learning pipelines, data preprocessing, and advanced analytics techniques.
 
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![Python](https://img.shields.io/badge/Python-3.11%2B-blue)
 ![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-1.0%2B-green)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-1.8%2B-green)
 ![License](https://img.shields.io/badge/License-Open%20Source-brightgreen)
 
 ---
@@ -46,9 +46,9 @@ git clone https://github.com/NAlfassal/Exercises.git
 cd Exercises
 ```
 
-### 2. Install Dependencies
+### 2. Install Dependencies with uv
 ```bash
-# using uv 
+# Install using uv (fast and modern package manager)
 uv sync
 ```
 
@@ -79,8 +79,8 @@ Exercises/
 │
 ├── data/                                   # Dataset folder
 │
-├── pyproject.toml                          # Project configuration
-├── uv.lock                                 # Dependency lock file
+├── pyproject.toml                          # Project configuration & dependencies
+├── uv.lock                                 # Dependency lock file (managed by uv)
 ├── .python-version                         # Python version specification
 ├── main.py                                 # Main script
 ├── .gitignore                              # Git configuration
@@ -207,24 +207,28 @@ STEP 5: Parameter Tuning
 
 ## 📦 Requirements
 
+The project uses **uv** as the package manager for fast and reliable dependency management.
+
+### Core Dependencies
+
 | Library | Version | Purpose |
 |---------|---------|---------|
-| pandas | ≥1.3.0 | Data manipulation |
-| numpy | ≥1.21.0 | Numerical operations |
-| scikit-learn | ≥1.0.0 | Machine learning |
-| matplotlib | ≥3.4.0 | Data visualization |
-| seaborn | ≥0.11.0 | Statistical plots |
-| jupyter | ≥1.0.0 | Notebook environment |
+| pandas | ≥2.3.3 | Data manipulation |
+| scikit-learn | ≥1.8.0 | Machine learning |
+| seaborn | ≥0.13.2 | Statistical plots |
+| scipy | ≥1.16.3 | Scientific computing |
+| plotly-express | ≥0.4.1 | Interactive visualizations |
+| nbformat | ≥5.10.4 | Jupyter notebook support |
 
-See `pyproject.toml` for complete list of dependencies.
+**Complete dependency list and versions** are specified in `pyproject.toml` and locked in `uv.lock` for reproducibility.
 
 ---
 
 ## 🛠️ Installation
 
 ### Prerequisites
-- Python 3.8 or higher
-- uv package manager (or pip as alternative)
+- Python 3.11 or higher
+- **uv** package manager ([Install uv](https://docs.astral.sh/uv/))
 - Git
 
 ### Step-by-Step Installation
@@ -235,24 +239,31 @@ git clone https://github.com/NAlfassal/Exercises.git
 cd Exercises
 ```
 
-2. **Install dependencies with uv**
+2. **Install uv (if not already installed)**
 ```bash
-# Using uv (recommended)
+# On macOS/Linux:
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# On Windows:
+powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+
+# Or use your package manager
+brew install uv  # macOS
+apt install uv   # Ubuntu/Debian
+```
+
+3. **Install project dependencies with uv**
+```bash
+# Synchronize dependencies from pyproject.toml and uv.lock
 uv sync
 ```
 
-Or with pip:
-```bash
-# Using pip as alternative
-pip install -r requirements.txt
-```
-
-3. **Verify installation**
+4. **Verify installation**
 ```bash
 python -c "import pandas, numpy, sklearn; print('✅ All libraries installed successfully!')"
 ```
 
-4. **Launch Jupyter**
+5. **Launch Jupyter**
 ```bash
 jupyter notebook
 ```
@@ -285,6 +296,23 @@ jupyter notebook
 - 📊 Visualize results
 - 💾 Save your work regularly
 - 🤔 Try variations and modifications
+
+### Dependency Management with uv
+
+**Update dependencies:**
+```bash
+uv sync
+```
+
+**Add a new package:**
+```bash
+uv add package-name
+```
+
+**Remove a package:**
+```bash
+uv remove package-name
+```
 
 ---
 
@@ -351,7 +379,7 @@ After completing all exercises, you will be able to:
 - ✅ **Progressive Difficulty** - Beginner to advanced level
 - ✅ **Best Practices** - Industry-standard approaches
 - ✅ **Well-Documented** - Clear explanations and examples
-- ✅ **Reproducible** - All notebooks are fully reproducible
+- ✅ **Reproducible** - All notebooks are fully reproducible with uv
 
 ---
 
@@ -381,6 +409,7 @@ For questions about:
 - **Exercises:** Check the notebook documentation
 - **Concepts:** Review the notebook sections
 - **Technical Issues:** Refer to scikit-learn and pandas documentation
+- **uv Usage:** Visit [uv documentation](https://docs.astral.sh/uv/)
 
 ---
 
@@ -396,7 +425,7 @@ This repository is open-source and available for educational purposes.
 
 **GitHub:** [@NAlfassal](https://github.com/NAlfassal)
 
-**Repository:** [Exercises](https://github.com/NAlfassal/Exercises)
+**Repository:** [ML_Pipelines](https://github.com/NAlfassal/Exercises)
 
 ---
 
@@ -418,3 +447,4 @@ After mastering these exercises:
 **Status:** ✅ Active & Growing
 **Total Exercises:** 8
 **Difficulty Range:** Beginner to Advanced
+**Package Manager:** uv (Fast, Modern, Reliable)
