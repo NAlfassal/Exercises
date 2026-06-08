@@ -388,30 +388,15 @@ Found an issue or have suggestions? Feel free to:
 
 ---
 
-## 📞 Support
+## Support
 
 For questions about:
 - **Exercises:** Check the notebook documentation
-- **Concepts:** Review the README files in each module
+- **Concepts:** Review files in each module
 - **Technical Issues:** Refer to scikit-learn and pandas documentation
 
 ---
 
-## 📄 License
-
-This repository is open-source and available for educational purposes.
-
----
-
-## 👤 Author
-
-**NAlfassal** - Data Science & Machine Learning Enthusiast
-
-**GitHub:** [@NAlfassal](https://github.com/NAlfassal)
-
-**Repository:** [ML_Pipelines](https://github.com/NAlfassal/Exercises)
-
----
 
 ## 🎯 Next Steps
 
