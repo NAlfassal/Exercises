@@ -48,7 +48,7 @@ cd Exercises
 
 ### 2. Install Dependencies
 ```bash
-using uv 
+#using uv 
 uv sync
 ```
 
