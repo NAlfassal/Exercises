@@ -1,4 +1,4 @@
-# 🚀 ML_Pipelines - Machine Learning & Data Engineering Mastery
+# ML_Pipelines - Machine Learning & Data Engineering Mastery
 
 > A comprehensive collection of hands-on exercises and projects focused on mastering machine learning pipelines, data preprocessing, and advanced analytics techniques.
 
